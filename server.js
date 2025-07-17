@@ -17,9 +17,10 @@ app.use('/api', createProxyMiddleware({
   },
 }));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
-  console.log(`Server jalan di http://localhost:${PORT}`);
+app.listen(8080, () => {
+  console.log('Server jalan di http://localhost:8080');
 });
+
 
