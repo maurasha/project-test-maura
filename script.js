@@ -2,11 +2,11 @@ fetch('/api/ideas?page[number]=1&page[size]=10&append[]=small_image&append[]=med
   .then(res => res.json())
   .then(data => {
     console.log('Data dari API proxy:', data);
-    // Render ke halaman kamu
+   
   });
 
 
-// ================== HEADER DINAMIS & PARALLAX ==================
+
 let lastScrollY = window.scrollY;
 const header = document.getElementById('main-header');
 
@@ -38,7 +38,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ================== NAVIGASI SECTION ==================
+
 const navLinks = document.querySelectorAll('.nav-link');
 const contentSections = document.querySelectorAll('.content-section');
 
@@ -69,7 +69,7 @@ navLinks.forEach(link => {
   });
 });
 
-// ================== DATA & RENDER (LOCAL STATIC DATA) ==================
+
 const ideasData = Array.from({ length: 47 }, (_, i) => ({
   id: i + 1,
   title: `Judul Ide Menarik ke-${i + 1} Dengan Kata yang Sangat Panjang Sekali`,
@@ -156,7 +156,7 @@ function renderPagination(totalItems, showPerPage) {
   }
 }
 
-// ================== EVENT LISTENERS ==================
+
 showPerPageSelect.addEventListener('change', () => {
   currentPage = 1;
   saveStateToLocalStorage();

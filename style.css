@@ -126,7 +126,7 @@ nav ul li a:hover {
     align-items: center;
     background-color: #555;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 98px), 0 100%);
-    border-radius: 0; /* Tidak perlu radius jika ingin tajam */
+    border-radius: 0; 
     margin-bottom: -40px;
 }
 
@@ -135,11 +135,11 @@ nav ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%; /* Lebih tinggi dari container untuk efek parallax vertikal */
-    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
-    transform: translateY(0); /* Posisi awal, akan diubah oleh JS */
-    transition: transform 0.1s linear; /* Transisi untuk efek halus */
-    will-change: transform; /* Memberi tahu browser untuk mengoptimalkan animasi ini */
+    height: 120%; 
+    object-fit: cover; 
+    transform: translateY(0); 
+    transition: transform 0.1s linear; 
+    will-change: transform; 
 }
 
 .banner-overlay {
@@ -148,11 +148,11 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay gelap untuk teks agar mudah dibaca */
+    background-color: rgba(0, 0, 0, 0.4); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Pastikan overlay di atas gambar */
+    z-index: 1; 
 }
 
 .banner-content {
@@ -160,7 +160,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 20px;
     max-width: 800px;
-    z-index: 2; /* Pastikan teks di atas overlay */
+    z-index: 2; 
 }
 
 .banner-content h1 {
@@ -176,8 +176,8 @@ nav ul li a:hover {
 }
 
 #ideas.content-section {
-    padding-top: 0; /* Hapus padding atas karena banner sudah ada */
-    margin-top: 20px; /* Jarak dari header */
+    padding-top: 0; 
+    margin-top: 20px; 
 }
 
 .ideas-controls {
@@ -187,11 +187,11 @@ nav ul li a:hover {
     padding: 20px;
     background-color: #f9f9f9;
     border-bottom: 1px solid #eee;
-    border-radius: 0 0 8px 8px; /* Hanya sudut bawah yang membulat */
+    border-radius: 0 0 8px 8px; 
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    margin-top: 0; /* Karena margin-bottom pada parallax-banner-container sudah disesuaikan */
+    margin-top: 0; 
     position: relative;
-    z-index: 3; /* Pastikan ini di atas konten lain jika ada overlap */
+    z-index: 3; 
 }
 
 .showing-info {
@@ -291,7 +291,7 @@ nav ul li a:hover {
     align-items: center;
     gap: 10px;
     margin-top: 30px;
-    padding-bottom: 20px; /* Tambahkan padding bawah agar tombol tidak terlalu menempel tepi */
+    padding-bottom: 20px; 
 }
 
 .pagination button {
@@ -318,7 +318,6 @@ nav ul li a:hover {
     cursor: not-allowed;
 }
 
-/* Form Styles for other sections */
 .form-container {
     max-width: 600px;
     margin: 0 auto;
