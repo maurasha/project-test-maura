@@ -1,22 +1,13 @@
 const express = require('express');
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const app = express();
 const path = require('path');
 
-const app = express();
-
-
+// If your static files are in a 'public' directory:
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', createProxyMiddleware({
-  target: 'https://suitmedia-backend.suitdev.com',
-  changeOrigin: true,
-  pathRewrite: {
-    '^/api': '/api', 
-  },
-}));
+// If your static files are in the root directory of your project (less common for static assets):
+// app.use(express.static(__dirname));
 
-const PORT = process.env.PORT || 8080;
-
-app.listen(PORT, () => {
-  console.log(`Server jalan di http://localhost:${PORT}`);
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
 });
